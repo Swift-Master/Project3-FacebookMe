@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:FacebookMe.gif">
+   </FileRef>
+   <Group
+      location = "group:FaceBookProfile"
+      name = "FaceBookProfile">
+      <FileRef
+         location = "group:FaceBookProfile.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:FaceBookProfile"
+         name = "FaceBookProfile">
+         <FileRef
+            location = "group:ViewController.swift">
+         </FileRef>
+         <Group
+            location = "group:Assets.xcassets"
+            name = "Assets.xcassets">
+            <Group
+               location = "group:AppIcon.appiconset"
+               name = "AppIcon.appiconset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:AccentColor.colorset"
+               name = "AccentColor.colorset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Base.lproj"
+            name = "Base.lproj">
+            <FileRef
+               location = "group:LaunchScreen.storyboard">
+            </FileRef>
+            <FileRef
+               location = "group:Main.storyboard">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:AppDelegate.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:SceneDelegate.swift">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:Project 03_Reference"
+      name = "Project 03_Reference">
+      <FileRef
+         location = "group:FacebookMe.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:FacebookMe"
+         name = "FacebookMe">
+         <FileRef
+            location = "group:UIColor+Extension.swift">
+         </FileRef>
+         <FileRef
+            location = "group:FBMeUser.swift">
+         </FileRef>
+         <Group
+            location = "group:Assets.xcassets"
+            name = "Assets.xcassets">
+            <Group
+               location = "group:fb_privacy_shortcuts.imageset"
+               name = "fb_privacy_shortcuts.imageset">
+               <FileRef
+                  location = "group:fb_glyphs_lock_20_20x20_@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+               <FileRef
+                  location = "group:fb_glyphs_lock_20_20x20_@2x.png">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:bayMax.imageset"
+               name = "bayMax.imageset">
+               <FileRef
+                  location = "group:images.jpeg">
+               </FileRef>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:fb_placeholder.imageset"
+               name = "fb_placeholder.imageset">
+               <FileRef
+                  location = "group:fb_placeholder@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:fb_placeholder@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:fb_games.imageset"
+               name = "fb_games.imageset">
+               <FileRef
+                  location = "group:fb_glyphs_games_20_20x20_@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:fb_glyphs_games_20_20x20_@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:fb_friends.imageset"
+               name = "fb_friends.imageset">
+               <FileRef
+                  location = "group:fb_glyphs_friend-friends_20_20x20_@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:fb_glyphs_friend-friends_20_20x20_@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:AppIcon.appiconset"
+               name = "AppIcon.appiconset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:fb_events.imageset"
+               name = "fb_events.imageset">
+               <FileRef
+                  location = "group:fb_glyphs_calendar_20_20x20_@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:fb_glyphs_calendar_20_20x20_@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:fb_settings.imageset"
+               name = "fb_settings.imageset">
+               <FileRef
+                  location = "group:fb_glyphs_gear_20_20x20_@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:fb_glyphs_gear_20_20x20_@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:fb_groups.imageset"
+               name = "fb_groups.imageset">
+               <FileRef
+                  location = "group:fb_glyphs_app-groups_20_20x20_@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:fb_glyphs_app-groups_20_20x20_@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:fb_help_and_support.imageset"
+               name = "fb_help_and_support.imageset">
+               <FileRef
+                  location = "group:fb_glyphs_question_20_20x20_@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+               <FileRef
+                  location = "group:fb_glyphs_question_20_20x20_@2x.png">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:fb_town_hall.imageset"
+               name = "fb_town_hall.imageset">
+               <FileRef
+                  location = "group:fb_glyphs_house_20_20x20_@3x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:fb_glyphs_house_20_20x20_@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+            <Group
+               location = "group:fb_education.imageset"
+               name = "fb_education.imageset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+               <FileRef
+                  location = "group:fb_glyphs_education_20_20x20_@2x.png">
+               </FileRef>
+               <FileRef
+                  location = "group:fb_glyphs_education_20_20x20_@3x.png">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:Base.lproj"
+            name = "Base.lproj">
+            <FileRef
+               location = "group:LaunchScreen.storyboard">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:FBMeBaseCell.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Specs.swift">
+         </FileRef>
+         <FileRef
+            location = "group:FBMeViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TableKeys.swift">
+         </FileRef>
+         <FileRef
+            location = "group:FBMeBaseViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:AppDelegate.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+      </Group>
+   </Group>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+</Workspace>
