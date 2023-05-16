@@ -1,18 +1,11 @@
-//
-//  Menu.swift
-//
-//
-//  Created by 최우태 on 2023/05/09.
-//
-
 import Foundation
 
 class Menu {
-    private var menus : [[[String?]]]?
+    public var menus : [[[String?]]]?
     
     init(){
         menus = [
-            [["bayMax","BayMax"]]
+            [["bayMax","BayMax \nView your Profile"]]
             ,[
                 ["fb_friends","Friends"]
                 ,["fb_events","Events"]

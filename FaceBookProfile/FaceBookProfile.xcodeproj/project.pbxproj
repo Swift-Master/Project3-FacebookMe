@@ -14,6 +14,8 @@
 		6E0AA32B29FEA7BF00BD99C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0AA32A29FEA7BF00BD99C4 /* Assets.xcassets */; };
 		6E0AA32E29FEA7BF00BD99C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0AA32C29FEA7BF00BD99C4 /* LaunchScreen.storyboard */; };
 		6EA127152A0A8F690066ED7A /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA127142A0A8F690066ED7A /* Menu.swift */; };
+		6EA127182A0BDFF50066ED7A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6EA127172A0BDFF50066ED7A /* SnapKit */; };
+		6EA1271A2A0BE70F0066ED7A /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA127192A0BE70F0066ED7A /* MenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,7 @@
 		6E0AA32D29FEA7BF00BD99C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E0AA32F29FEA7BF00BD99C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EA127142A0A8F690066ED7A /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		6EA127192A0BE70F0066ED7A /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EA127182A0BDFF50066ED7A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +70,7 @@
 				6E0AA32C29FEA7BF00BD99C4 /* LaunchScreen.storyboard */,
 				6E0AA32F29FEA7BF00BD99C4 /* Info.plist */,
 				6EA127142A0A8F690066ED7A /* Menu.swift */,
+				6EA127192A0BE70F0066ED7A /* MenuCell.swift */,
 			);
 			path = FaceBookProfile;
 			sourceTree = "<group>";
@@ -86,6 +91,9 @@
 			dependencies = (
 			);
 			name = FaceBookProfile;
+			packageProductDependencies = (
+				6EA127172A0BDFF50066ED7A /* SnapKit */,
+			);
 			productName = FaceBookProfile;
 			productReference = 6E0AA31E29FEA7BE00BD99C4 /* FaceBookProfile.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 6E0AA31529FEA7BE00BD99C4;
+			packageReferences = (
+				6EA127162A0BDFF50066ED7A /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 6E0AA31F29FEA7BE00BD99C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -142,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E0AA32629FEA7BE00BD99C4 /* ViewController.swift in Sources */,
+				6EA1271A2A0BE70F0066ED7A /* MenuCell.swift in Sources */,
 				6E0AA32229FEA7BE00BD99C4 /* AppDelegate.swift in Sources */,
 				6EA127152A0A8F690066ED7A /* Menu.swift in Sources */,
 				6E0AA32429FEA7BE00BD99C4 /* SceneDelegate.swift in Sources */,
@@ -360,6 +372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6EA127162A0BDFF50066ED7A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6EA127172A0BDFF50066ED7A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6EA127162A0BDFF50066ED7A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6E0AA31629FEA7BE00BD99C4 /* Project object */;
 }
