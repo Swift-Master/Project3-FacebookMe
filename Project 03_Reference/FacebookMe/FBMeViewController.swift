@@ -102,19 +102,19 @@ extension FBMeViewController: UITableViewDataSource {
 }
 
 extension FBMeViewController: UITableViewDelegate {
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    let modelForRow = rowModel(at: indexPath)
-    
-    guard let title = modelForRow[TableKeys.Title] else {
-      return 0.0
-    }
-    
-    if title == user.name {
-      return 64.0
-    } else {
-      return 44.0
-    }
-  }
+//  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//    let modelForRow = rowModel(at: indexPath)
+//    
+//    guard let title = modelForRow[TableKeys.Title] else {
+//      return 0.0
+//    }
+//    
+//    if title == user.name {
+//      return 64.0
+//    } else {
+//      return 44.0
+//    }
+//  }
   
   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     let modelForRow = rowModel(at: indexPath)

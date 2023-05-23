@@ -1,40 +1,28 @@
-
 import UIKit
-import SnapKit
 class MenuCell: UITableViewCell {
     
-    lazy var menuImage = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    }()
-    
-    var menuTitle = {
-       let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 24)
-        return label
-    }()
-    
+    static let identifier = "reused"
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setUI()
+        super.init(style: .default, reuseIdentifier: reuseIdentifier)
+        setDefaultProperty()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setUI() {
-        self.accessoryType = .disclosureIndicator
-        [menuImage,menuTitle].forEach({self.addSubview($0)})
-        menuImage.snp.makeConstraints { make in
-            make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(10)
-            make.verticalEdges.equalToSuperview()
-        }
-        menuTitle.snp.makeConstraints { make in
-            make.verticalEdges.equalToSuperview()
-            make.leading.equalTo(menuImage.snp.trailing).offset(10)
-        }
+    func setDefaultProperty() {
+        backgroundColor = .white
+        
+        var content = self.defaultContentConfiguration()
+        content.textProperties.font = UtilDatas.font.large
+        content.textProperties.color = .black
+        
+        content.secondaryTextProperties.font = UtilDatas.font.small
+        content.secondaryTextProperties.color = .gray
+        
+        self.contentConfiguration = content
     }
     
 }
