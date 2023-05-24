@@ -2,7 +2,10 @@ import UIKit
 import SnapKit
 class ViewController: UIViewController {
     private var tabledProfile = UITableView(frame: .zero, style: .grouped)
-    var sectionWithRows = Menu()
+    var dataModel :  [[[String]]] {
+        return Menu.menus
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -10,6 +13,10 @@ class ViewController: UIViewController {
         setNavigationBar()
         setTableView()
         setUI()
+    }
+    
+    func Row(at indexPath : IndexPath) -> [String] {
+        return dataModel[indexPath.section][indexPath.row]
     }
     
     func setNavigationBar() {
@@ -26,9 +33,8 @@ class ViewController: UIViewController {
     }
     
     func setTableView() {
-        
         tabledProfile.dataSource = self
-        tabledProfile.register(MenuCell.self, forCellReuseIdentifier: "menu")
+        tabledProfile.register(MenuCell.self, forCellReuseIdentifier: MenuCell.identifier)
     }
     
     func setUI() {
@@ -36,50 +42,51 @@ class ViewController: UIViewController {
         tabledProfile.snp.makeConstraints{make in
             make.edges.equalToSuperview()
         }
-        
     }
-    
-    
 }
 
 extension ViewController : UITableViewDataSource {
     
-    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 2 {return "Favorites"}
+        if section == 2 {return UtilDatas.cellStandard.sectionTitle}
         else {return nil}
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-       
-        guard let sectionCount = sectionWithRows.menus?.count else{return 0}
-        return sectionCount
+        return dataModel.count
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let currentRows = sectionWithRows.menus?[section] else {return 0}
-        return currentRows.count
+        return dataModel[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tabledProfile.dequeueReusableCell(withIdentifier: "menu", for: indexPath) as! MenuCell
-        guard let currentMenu = sectionWithRows.menus?[indexPath.section][indexPath.row] else {return cell}
-        if let currentImage = currentMenu[0] {
-            cell.menuImage.image = UIImage(named: currentImage)
-        }else {
-            cell.menuTitle.snp.updateConstraints { make in
-                make.leading.equalTo(cell.menuImage.snp.trailing).offset(30)
-            }
-            cell.menuTitle.textColor = .systemBlue
+        let cell = tabledProfile.dequeueReusableCell(withIdentifier: MenuCell.identifier, for: indexPath) as! MenuCell
+        let currentRow = Row(at: indexPath)
+        var currentImageName : String? = currentRow[0]
+        let currentTitle = currentRow[1]
+        var currentSubTitle : String?
+        var currentTitleColor = UtilDatas.cellStandard.titleColor
+        var currentTitleAlignment = UtilDatas.cellStandard.titleAlignment
+        var currentAccessoryType = UtilDatas.cellStandard.accessory
+        
+        if currentTitle == UtilDatas.cellStandard.logoutTitle {
+            currentTitleAlignment = .center
+            currentTitleColor = .red
+            currentAccessoryType = .none
+            currentImageName = nil
+        } else if currentImageName == UtilDatas.imageName.placeholder {
+            currentTitleColor = .blue
+        } else if currentImageName == UtilDatas.imageName.bayMax {
+            currentSubTitle = UtilDatas.cellStandard.subTitle
+            cell.cellHeight = 44.0
         }
-        cell.menuTitle.text = currentMenu[1]
-        if currentMenu[1] == "Log Out" {
-            cell.menuTitle.textColor = .systemRed
-            cell.menuTitle.snp.makeConstraints { make in
-                make.center.equalToSuperview()
-            }
-            cell.accessoryType = .none
-        }
+        cell.imageName = currentImageName
+        cell.setAccessoryType(currentAccessoryType)
+        cell.setDefaultProperty(currentTitle, currentSubTitle, cellTitleColor: currentTitleColor, cellTextAlignment: currentTitleAlignment)
         return cell
     }
+    
 }
+
 

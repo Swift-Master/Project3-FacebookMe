@@ -70,13 +70,10 @@
 				6E52A5392A1CFB39009A81D2 /* Models */,
 				6E0AA32129FEA7BE00BD99C4 /* AppDelegate.swift */,
 				6E0AA32329FEA7BE00BD99C4 /* SceneDelegate.swift */,
-				6E0AA32529FEA7BE00BD99C4 /* ViewController.swift */,
 				6E0AA32729FEA7BE00BD99C4 /* Main.storyboard */,
 				6E0AA32A29FEA7BF00BD99C4 /* Assets.xcassets */,
 				6E0AA32C29FEA7BF00BD99C4 /* LaunchScreen.storyboard */,
 				6E0AA32F29FEA7BF00BD99C4 /* Info.plist */,
-				6EA127142A0A8F690066ED7A /* Menu.swift */,
-				6EA127192A0BE70F0066ED7A /* MenuCell.swift */,
 			);
 			path = FaceBookProfile;
 			sourceTree = "<group>";
@@ -84,6 +81,7 @@
 		6E52A5392A1CFB39009A81D2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6EA127142A0A8F690066ED7A /* Menu.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -91,6 +89,7 @@
 		6E52A53A2A1CFB44009A81D2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6EA127192A0BE70F0066ED7A /* MenuCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,6 +97,7 @@
 		6E52A53B2A1CFB49009A81D2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6E0AA32529FEA7BE00BD99C4 /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

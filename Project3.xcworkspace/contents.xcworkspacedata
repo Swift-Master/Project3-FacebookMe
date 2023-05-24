@@ -2,18 +2,14 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Project 03_Reference/FacebookMe.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:FaceBookProfile/FaceBookProfile.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:FacebookMe.gif">
    </FileRef>
-   <Group
-      location = "group:Project 03_Reference"
-      name = "Project 03_Reference">
-      <FileRef
-         location = "group:FacebookMe.xcodeproj">
-      </FileRef>
-   </Group>
    <FileRef
       location = "group:README.md">
    </FileRef>
