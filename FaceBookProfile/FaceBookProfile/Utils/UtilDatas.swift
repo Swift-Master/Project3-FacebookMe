@@ -2,6 +2,7 @@ import UIKit
 
 public struct UtilDatas {
     
+    // MARK: - 테이블 셀 기초 구성요소들
     public struct CellStandard {
         public let backgroundColor : UIColor = .white
         public let titleColor : UIColor = .black
@@ -10,8 +11,10 @@ public struct UtilDatas {
         public let subTitle = "View your profile"
         public let sectionTitle = "FAVORITES"
         public let accessory : UITableViewCell.AccessoryType = .disclosureIndicator
+        public let titleHeight : Double = 66.0
     }
     
+    // MARK: - 공통 속성들
     public struct FontSize {
         public let tiny: CGFloat = 10
         public let small: CGFloat = 12
@@ -43,6 +46,8 @@ public struct UtilDatas {
         public let placeholder = "fb_placeholder"
     }
     
+    
+    // MARK: - 구조체의 getter역할을 하는 계산속성들
     public static var fontSize: FontSize {
         return FontSize()
     }

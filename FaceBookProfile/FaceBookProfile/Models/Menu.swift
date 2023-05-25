@@ -1,5 +1,4 @@
-import Foundation
-
+// MARK: - 테이블 데이터 모델
 class Menu {
 static var menus : [[[String]]] {
         return [

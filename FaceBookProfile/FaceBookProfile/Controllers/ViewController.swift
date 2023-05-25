@@ -1,8 +1,11 @@
 import UIKit
 import SnapKit
+
 class ViewController: UIViewController {
-    private var tabledProfile = UITableView(frame: .zero, style: .grouped)
-    var dataModel :  [[[String]]] {
+    
+    // MARK: - 테이블뷰, 테이블 데이터
+     var tabledProfile = UITableView(frame: .zero, style: .grouped)
+     var dataModel :  [[[String]]] {
         return Menu.menus
     }
     
@@ -15,28 +18,32 @@ class ViewController: UIViewController {
         setUI()
     }
     
-    func Row(at indexPath : IndexPath) -> [String] {
+    // MARK: - 테이블 데이터 기반으로 현재 row 정보를 가져옵니다.
+     func Row(at indexPath : IndexPath) -> [String] {
         return dataModel[indexPath.section][indexPath.row]
     }
     
+    // MARK: - UINavigationBar 관련 설정
     func setNavigationBar() {
         let navigationBarAppearance = UINavigationBarAppearance()
-        navigationBarAppearance.configureWithOpaqueBackground()
         navigationBarAppearance.backgroundColor = #colorLiteral(red: 0.1678575873, green: 0.4667304158, blue: 0.7120113969, alpha: 1)
-        navigationController?.navigationBar.standardAppearance = navigationBarAppearance
-        navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+        // 스크롤이 네비게이션 바 도달 시 적용
         navigationItem.scrollEdgeAppearance = navigationBarAppearance
+        //일반 상태에 적용
         navigationItem.standardAppearance = navigationBarAppearance
+        //소형 아이폰 네비게이션 바에 적용
         navigationItem.compactAppearance = navigationBarAppearance
         navigationController?.setNeedsStatusBarAppearanceUpdate()
         title = "Facebook"
     }
     
+    // MARK: - 테이블 뷰 셀 등록, 대리자 설정
     func setTableView() {
         tabledProfile.dataSource = self
         tabledProfile.register(MenuCell.self, forCellReuseIdentifier: MenuCell.identifier)
     }
     
+    // MARK: - 레이아웃 설정
     func setUI() {
         self.view.addSubview(tabledProfile)
         tabledProfile.snp.makeConstraints{make in
@@ -45,48 +52,6 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController : UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 2 {return UtilDatas.cellStandard.sectionTitle}
-        else {return nil}
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return dataModel.count
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataModel[section].count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tabledProfile.dequeueReusableCell(withIdentifier: MenuCell.identifier, for: indexPath) as! MenuCell
-        let currentRow = Row(at: indexPath)
-        var currentImageName : String? = currentRow[0]
-        let currentTitle = currentRow[1]
-        var currentSubTitle : String?
-        var currentTitleColor = UtilDatas.cellStandard.titleColor
-        var currentTitleAlignment = UtilDatas.cellStandard.titleAlignment
-        var currentAccessoryType = UtilDatas.cellStandard.accessory
-        
-        if currentTitle == UtilDatas.cellStandard.logoutTitle {
-            currentTitleAlignment = .center
-            currentTitleColor = .red
-            currentAccessoryType = .none
-            currentImageName = nil
-        } else if currentImageName == UtilDatas.imageName.placeholder {
-            currentTitleColor = .blue
-        } else if currentImageName == UtilDatas.imageName.bayMax {
-            currentSubTitle = UtilDatas.cellStandard.subTitle
-            cell.cellHeight = 44.0
-        }
-        cell.imageName = currentImageName
-        cell.setAccessoryType(currentAccessoryType)
-        cell.setDefaultProperty(currentTitle, currentSubTitle, cellTitleColor: currentTitleColor, cellTextAlignment: currentTitleAlignment)
-        return cell
-    }
-    
-}
+
 
 
