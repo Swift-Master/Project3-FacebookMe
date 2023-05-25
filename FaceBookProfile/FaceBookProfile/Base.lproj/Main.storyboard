@@ -15,10 +15,25 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sFc-el-ZfS">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sFc-el-ZfS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gxv-B2-DA1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sFc-el-ZfS" secondAttribute="trailing" id="hYd-4o-g63"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sFc-el-ZfS" secondAttribute="bottom" id="iiU-5x-k0G"/>
+                            <constraint firstItem="sFc-el-ZfS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oTY-b2-rHC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Facebook" id="WGR-wT-19i"/>
+                    <connections>
+                        <outlet property="tableView" destination="sFc-el-ZfS" id="5dz-nC-p4C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
