@@ -14,3 +14,4 @@
     - 총 5개의 섹션에 따라 맞는 Xib 파일 적용
 
 ### 실행화면
+<img src="./FacebookMe_step1.gif" width="300" />
