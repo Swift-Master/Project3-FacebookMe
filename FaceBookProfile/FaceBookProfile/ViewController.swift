@@ -26,17 +26,17 @@ class ViewController: UIViewController {
     
     func setupUI() {
         // NavigationBar Color 설정
-        navigationController?.navigationBar.backgroundColor = UIColor(red: 0.361, green: 0.447, blue: 0.627, alpha: 1.000)
+        navigationController?.navigationBar.backgroundColor = .appMainColor
         
         // TableView 스크롤 시, NavigationBar 색상 변경
-        navigationController?.navigationBar.barTintColor = UIColor(red: 0.361, green: 0.447, blue: 0.627, alpha: 1.000)
+        navigationController?.navigationBar.barTintColor = .appMainColor
     }
     
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.backgroundColor = UIColor(red: 0.937, green: 0.937, blue: 0.953, alpha: 1.000)
+        tableView.backgroundColor = .appMainColor
         
         // ProfileXib 등록
         let profileXib = UINib(nibName: "ProfileTableViewCell", bundle: nil)
@@ -120,7 +120,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             
             if cell.menuImageView.image == nil {
                 cell.rightLabel.text = ""
-                cell.menuName.textColor = UIColor(red: 0.361, green: 0.447, blue: 0.627, alpha: 1.000)
+                cell.menuName.textColor = .appMainColor
             }
             
             return cell
