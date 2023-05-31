@@ -56,6 +56,7 @@
 		653CF0432A26DFBF00581290 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				659FC94F2A1F334E00A442E6 /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -63,6 +64,8 @@
 		653CF0442A26DFC900581290 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6E0AA32129FEA7BE00BD99C4 /* AppDelegate.swift */,
+				6E0AA32329FEA7BE00BD99C4 /* SceneDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -70,6 +73,9 @@
 		653CF0452A26DFD300581290 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				653CF0492A26E26D00581290 /* CustomCells */,
+				6E0AA32729FEA7BE00BD99C4 /* Main.storyboard */,
+				6E0AA32C29FEA7BF00BD99C4 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -80,6 +86,27 @@
 				653CF0472A26E01D00581290 /* UIColor+CustomColors.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		653CF0492A26E26D00581290 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				659FC9472A1E497000A442E6 /* ProfileTableViewCell.swift */,
+				659FC9482A1E497000A442E6 /* ProfileTableViewCell.xib */,
+				659FC94B2A1F2FAE00A442E6 /* MenuTableViewCell.swift */,
+				659FC94C2A1F2FAE00A442E6 /* MenuTableViewCell.xib */,
+				659FC9532A1F449D00A442E6 /* LogOutTableViewCell.swift */,
+				659FC9542A1F449D00A442E6 /* LogOutTableViewCell.xib */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		653CF04A2A26E35E00581290 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6E0AA32529FEA7BE00BD99C4 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		6E0AA31529FEA7BE00BD99C4 = {
@@ -101,24 +128,13 @@
 		6E0AA32029FEA7BE00BD99C4 /* FaceBookProfile */ = {
 			isa = PBXGroup;
 			children = (
+				653CF04A2A26E35E00581290 /* ViewControllers */,
 				653CF0462A26DFEF00581290 /* Extensions */,
 				653CF0452A26DFD300581290 /* Views */,
 				653CF0442A26DFC900581290 /* Controllers */,
 				653CF0432A26DFBF00581290 /* Models */,
-				6E0AA32129FEA7BE00BD99C4 /* AppDelegate.swift */,
-				6E0AA32329FEA7BE00BD99C4 /* SceneDelegate.swift */,
-				6E0AA32529FEA7BE00BD99C4 /* ViewController.swift */,
-				6E0AA32729FEA7BE00BD99C4 /* Main.storyboard */,
 				6E0AA32A29FEA7BF00BD99C4 /* Assets.xcassets */,
-				6E0AA32C29FEA7BF00BD99C4 /* LaunchScreen.storyboard */,
 				6E0AA32F29FEA7BF00BD99C4 /* Info.plist */,
-				659FC9472A1E497000A442E6 /* ProfileTableViewCell.swift */,
-				659FC9482A1E497000A442E6 /* ProfileTableViewCell.xib */,
-				659FC94B2A1F2FAE00A442E6 /* MenuTableViewCell.swift */,
-				659FC94C2A1F2FAE00A442E6 /* MenuTableViewCell.xib */,
-				659FC94F2A1F334E00A442E6 /* Model.swift */,
-				659FC9532A1F449D00A442E6 /* LogOutTableViewCell.swift */,
-				659FC9542A1F449D00A442E6 /* LogOutTableViewCell.xib */,
 			);
 			path = FaceBookProfile;
 			sourceTree = "<group>";
